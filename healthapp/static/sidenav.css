@@ -85,7 +85,7 @@
   bottom: 24rem;
   right: 95%;
   transform: translateX(-50%);
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 0.8rem;
   border-radius: 3rem;
