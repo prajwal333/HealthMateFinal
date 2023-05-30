@@ -3,19 +3,19 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request,'healthapp/index.html')
+    return render(request,'index.html')
 def about(request):
-    return render(request,'healthapp/about.html')
+    return render(request,'about.html')
 def contactus(request):
     return HttpResponse("This is contact us")
 def consultationform(request):
-    return render(request, 'healthapp/consultationform.html')
+    return render(request, 'consultationform.html')
 def blog(request):
-    return render(request, 'healthapp/blog.html')
+    return render(request, 'blog.html')
 def ourservices(request):
-    return render(request, 'healthapp/ourservices.html')
+    return render(request, 'ourservices.html')
 def ourdoctors(request):
-    return render(request, 'healthapp/ourdoctors.html')
+    return render(request, 'ourdoctors.html')
 def base(request):
-    return render(request, 'healthapp/base.html')
+    return render(request, 'base.html')
 
