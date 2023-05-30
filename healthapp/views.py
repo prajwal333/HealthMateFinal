@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import doctor
+from .models import consultationform
 from math import ceil
 
 # Create your views here.
@@ -34,9 +35,29 @@ def ourdoctors(request):
     # params = {'allDocs': allDocs}
 
 
-def consultationform(request):
+def Consultationform(request):
+    if request.method=='POST':
+        name = request.POST.get('name','')
+        email = request.POST.get('email','')
+        phone = request.POST.get('phone','')
+        department = request.POST.get('department','')
+        date = request.POST.get('date','')
+        time = request.POST.get('time','')
+        city = request.POST.get('city','')
+        state = request.POST.get('state','')
+        # print(name,email,phone,department,date,time,city,state)
+        Consultationform=consultationform(name=name,email=email,phone=phone,department=department,date=date,time=time,city=city,state=state)
+        Consultationform.save()
+        return HttpResponse('Thank you for filling appointment.We will reach you ASAP')
+
     return render(request, 'healthapp/consultationform.html')
 
 
 def blog(request):
     return render(request, 'healthapp/blog.html')
+
+def docview(request,myid):
+    # Fetching using id
+    doc= doctor.objects.filter(id=myid)
+
+    return render(request, 'healthapp/docview.html',{'doctors':doc[0]})
