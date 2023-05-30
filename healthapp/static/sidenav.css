@@ -1,4 +1,4 @@
-/* *,*:before,*:after {
+*,*:before,*:after {
 	box-sizing: border-box;
 }
 
@@ -68,9 +68,9 @@
 
 .side-nav ul li div { position: relative; }
 
- */
- @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
+<<<<<<< HEAD
+=======
  
  
  /* nav css  */
@@ -164,3 +164,4 @@
 }
  /*search slide out*/
  
+>>>>>>> 7b5d723d6a7abd818057f80f495b529a37c236e5
