@@ -1,8 +1,16 @@
-var $myGroup = $('#myGroup');
-$myGroup.on('show.bs.collapse','.collapse', function() {
-    $myGroup.find('.collapse.in').collapse('hide');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modalContent = document.querySelector('.modal-content');
+
+openModalBtn.addEventListener('click', () => {
+  modalOverlay.classList.add('open');
+  modalContent.classList.add('open');
 });
-function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('sidebar-open');
-  }
+
+closeModalBtn.addEventListener('click', () => {
+  modalOverlay.classList.remove('open');
+  modalContent.classList.remove('open');
+});
+
+

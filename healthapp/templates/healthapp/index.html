@@ -5,7 +5,19 @@
   <head>
     <link rel="stylesheet" href="/static/sidenav.css">
     <script>
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modalOverlay = document.querySelector('.modal-overlay');
       
+      openModalBtn.addEventListener('click', () => {
+        modalOverlay.style.pointerEvents = 'auto';
+        modalOverlay.style.opacity = '1';
+      });
+      
+      closeModalBtn.addEventListener('click', () => {
+        modalOverlay.style.pointerEvents = 'none';
+        modalOverlay.style.opacity = '0';
+      });
     </script>
 
   </head>
@@ -77,7 +89,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore tempor incididunt ut labore tempor incididunt ut labore </p> 
           
 
-            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+            <button type="button" id="two" class="btn btn-primary btn-lg button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
              Make Appointment</button>
              
         </div>
