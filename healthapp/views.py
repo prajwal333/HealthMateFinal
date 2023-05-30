@@ -8,6 +8,7 @@ from math import ceil
 
 
 def index(request):
+<<<<<<< HEAD
     return render(request, 'healthapp/index.html')
 
 
@@ -55,6 +56,23 @@ def Consultationform(request):
 
 def blog(request):
     return render(request, 'healthapp/blog.html')
+=======
+    return render(request,'index.html')
+def about(request):
+    return render(request,'about.html')
+def contactus(request):
+    return HttpResponse("This is contact us")
+def consultationform(request):
+    return render(request, 'consultationform.html')
+def blog(request):
+    return render(request, 'blog.html')
+def ourservices(request):
+    return render(request, 'ourservices.html')
+def ourdoctors(request):
+    return render(request, 'ourdoctors.html')
+def base(request):
+    return render(request, 'base.html')
+>>>>>>> 7b5d723d6a7abd818057f80f495b529a37c236e5
 
 def docview(request,myid):
     # Fetching using id

@@ -1,6 +1,7 @@
 {% extends './base.html' %}
 {% block content %}
 
+<<<<<<< HEAD:healthapp/templates/healthapp/index.html
 {% comment %} banner section {% endcomment %}
 
 <head>
@@ -10,8 +11,81 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-1 banner side-nav align-self-center">
+=======
+  {% comment %} banner section {% endcomment %}
+  <head>
+    <link rel="stylesheet" href="/static/sidenav.css">
+    <script>
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modalOverlay = document.querySelector('.modal-overlay');
+      
+      openModalBtn.addEventListener('click', () => {
+        modalOverlay.style.pointerEvents = 'auto';
+        modalOverlay.style.opacity = '1';
+      });
+      
+      closeModalBtn.addEventListener('click', () => {
+        modalOverlay.style.pointerEvents = 'none';
+        modalOverlay.style.opacity = '0';
+      });
+    </script>
+
+  </head>
+  <section id="banner">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1 banner side-nav align-self-center">
+          
+          {% comment %} <nav class="sidebar">
+            <a id="nav-el" class="active" href="/./">
+              <i class="bi bi-grid"></i></a>
+              
+            <a id="nav-el" href="#about">
+              <i class="bi bi-search"></i>
+            
+            </a>
+            <a id="nav-el" href="#experience">
+              <i class="bi bi-chat-dots"></i></a>
+            <a id="nav-el" href="#services">
+              <i class="bi bi-bell"></i></a>
+            <a id="nav-el" href="#contact">
+              <i class="bi bi-person-circle"></i></a>
+              
+          </nav> {% endcomment %}
+          
+        
+  {% comment %} <ul>
+    <li>
+      <div class="home-icon">
+        
+        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+       
+      </div>
+    </li>
+    <li>
+      <div class="about-icon">
+        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+      </div>
+    </li>
+    <li>
+      <div class="work-icon">
+        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+      </div>
+    </li>
+    <li>
+      <div class="mail-icon">
+        <div class="mail-base">
+          <div class="mail-top"></div>
+        </div>
+      </div>
+    </li>
+  </ul> {% endcomment %}
+</div>
+>>>>>>> 7b5d723d6a7abd818057f80f495b529a37c236e5:templates/index.html
 
 
+<<<<<<< HEAD:healthapp/templates/healthapp/index.html
         <ul>
           <li>
             <div class="home-icon">
@@ -19,6 +93,23 @@
                 <div class="roof-edge"></div>
               </div> {% endcomment %}
               <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+=======
+        </div>
+        
+        <div class="col-md-3 banner-text">
+          <p class="My-title">Welcome to HealthMate</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore tempor incididunt ut labore tempor incididunt ut labore </p> 
+          
+
+            <button type="button" id="two" class="btn btn-primary btn-lg button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+             Make Appointment</button>
+             
+        </div>
+        <div class="col-md-3 banner-img">
+          <img src="static/img/Doctors.png" alt="" class="img-fluid" alternate="Banner">
+        </div>
+        
+>>>>>>> 7b5d723d6a7abd818057f80f495b529a37c236e5:templates/index.html
 
             </div>
           </li>
@@ -120,10 +211,32 @@
         <p><b>Jennifer Lopez</b></p>
       </div>
     </div>
+<<<<<<< HEAD:healthapp/templates/healthapp/index.html
   </div>
 </section>
 
 <!---------------------------Modal-------------------------------->
+=======
+  </section>
+<!----------------------------------------Sidebar-------------------------------->
+ 
+<nav class="sidebar">
+  <a id="nav-el" class="active" href="/./">
+    <i class="bi bi-grid"></i></a>
+    
+  <a id="nav-el" href="#about">
+    <i class="bi bi-search"></i>
+  
+  </a>
+  <a id="nav-el" href="#experience">
+    <i class="bi bi-chat-dots"></i></a>
+  <a id="nav-el" href="#services">
+    <i class="bi bi-bell"></i></a>
+  <a id="nav-el" href="#contact">
+    <i class="bi bi-person-circle"></i></a>
+</nav>
+  <!---------------------------Modal-------------------------------->
+>>>>>>> 7b5d723d6a7abd818057f80f495b529a37c236e5:templates/index.html
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
